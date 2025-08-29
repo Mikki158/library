@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить запись</title>
+</head>
+<body>
+<h1>Добавление записи о взятии книги</h1>
+
+<form th:action="@{/readings/add}" th:object="${reading}" method="post">
+    <label>Клиент:</label>
+    <select th:field="*{client}" required>
+        <option th:each="c : ${clients}" th:value="${c.id}" th:text="${c.fullName}"></option>
+    </select><br/><br/>
+
+    <label>Книга:</label>
+    <select th:field="*{book}" required>
+        <option th:each="b : ${books}" th:value="${b.id}" th:text="${b.title}"></option>
+    </select><br/><br/>
+
+    <label>Дата взятия:</label>
+    <input type="date" th:field="*{dateTaken}" required/><br/><br/>
+
+    <button type="submit">Сохранить</button>
+</form>
+
+<a th:href="@{/readings}">Назад к списку</a>
+</body>
+</html>
