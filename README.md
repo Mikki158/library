@@ -39,5 +39,3 @@ java -jar target/library-0.0.1-SNAPSHOT.jar
 * **Список клиентов:** [http://localhost:8080/clients](http://localhost:8080/clients)
 * **Список взятых книг:** [http://localhost:8080/readings](http://localhost:8080/readings)
 * **REST API для читаемых книг:** [http://localhost:8080/api/readings](http://localhost:8080/api/readings)
-
-Хочешь, чтобы я это сделал?
